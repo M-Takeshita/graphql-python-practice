@@ -1,9 +1,10 @@
-from app.schema import schema
+from app.schema import books
 
-class BookDto: 
+# 
+class BooksFactory: 
   def get_dto_all_books():
     return [
-      schema.Book(
+      books.Book(
           id= 1,
           title="The Great Gatsby",
           description="hello world",

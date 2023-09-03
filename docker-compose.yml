@@ -1,10 +1,18 @@
-version: "3.0"
+version: "3.9"
 
 services:
-  api:
-    container_name: "api"
-    volumes:
-      - ./app: /app
-    build: .
+  mysql:
+    image: mysql:8.0.28
+    platform: linux/amd64
+    container_name: mysql-container
     ports:
-      - 8080:8080
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: python_practice_database
+      MYSQL_USER: user
+      MYSQL_PASSWORD: userpassword
+      TZ: "Asia/Tokyo"
+    volumes:
+      - ./docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./docker/mysql/sql:/docker-entrypoint-initdb.d
