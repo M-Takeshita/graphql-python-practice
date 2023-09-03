@@ -1,4 +1,3 @@
-import typing
 import strawberry
 
 @strawberry.type(name="Books")
