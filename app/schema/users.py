@@ -1,3 +1,5 @@
+
+import datetime
 import strawberry
 
 @strawberry.type(name="Users")
@@ -9,3 +11,5 @@ class Users:
   last_name_kana: str
   age: int
   gender: int
+  created_at: datetime.datetime
+  updated_at: datetime.datetime
