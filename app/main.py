@@ -1,7 +1,7 @@
 import strawberry
 
-from app.resolver import book as resolverBook
-from app.schema import schema
+from app.resolver import books as resolverBook
+from app.schema import books as schemaBooks
 
 # Query Example
 # @strawberry.type
@@ -22,6 +22,6 @@ from app.schema import schema
 
 @strawberry.type
 class Query:
-    book: list[schema.Book] = strawberry.field(resolver= resolverBook.get_all_books)
+    book: list[schemaBooks.Book] = strawberry.field(resolver= resolverBook.get_all_books)
 
-schema = strawberry.Schema(query=Query)
+books = strawberry.Schema(query=Query)
