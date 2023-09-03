@@ -51,3 +51,7 @@ $ mysql -u root -p
 - [DockerでFastAPIの環境を作ってGETするまで](https://zenn.dev/satonopan/articles/c4e6d55a64da0c)
 - [ストロベリーを始めよう(公式Doc)](https://strawberry.rocks/docs)
 - [PythonのGraphQLライブラリStrawberryを使ってみた](https://qiita.com/nttpc-aiyo/items/bb946b864e67c2da9a53)
+- [Python+SQLAlchemy+MySQLでDB接続](https://financial-it-engineer.hatenablog.com/entry/20170112/1484220341)
+- [【SQLAlchemy】Generic Typesと各種DBの型 対応表
+](https://zenn.dev/re24_1986/articles/8520ac3f9a0187)
+- [【Python 】pymysqlで「RuntimeError: cryptography is required for sha256_password...」の解消方法！](https://akizora.tech/pymysql-cryptography-required-4236)
