@@ -13,7 +13,7 @@ python(FW:FastAPI), graphqlの練習リポジトリ
 
 ## その他
 ### Docker
-仮想環境としてDockerを使用する(予定)
+- mysqlをdockerに作成
 
 
 ## 起動方法
@@ -23,6 +23,25 @@ $ uvicorn app.main:app
 
 # 起動コマンド(FastAPI x GraphQL(strawberry))
 $ strawberry server app.main
+```
+
+## 起動方法(Docker)
+```bash
+# docker起動
+$ docker-compose up -d
+
+# docker削除(volumes削除, 削除しない場合は-v無しで実行)
+$ docker-compose down -v
+
+# DB 初期化
+$ zsh ./docker/mysql/init_mysql_db.sh
+
+# コンテナにログイン
+$ docker exec -it mysql-container bash
+
+# MySQLにログイン
+$ mysql -u root -p
+
 ```
 
 ## 参考にしたサイト類
